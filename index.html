@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Plan - MycatHost</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Tmavé pozadí */
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Výška stránky */
+        }
+        .header {
+            background-color: #007BFF; /* Modrý pruh */
+            padding: 20px;
+            text-align: left; /* Nápis vlevo */
+        }
+        .header h1 {
+            color: white;
+            display: inline;
+        }
+        .header h1 span {
+            color: red; /* Červená barva pro "Host" */
+        }
+        .nav {
+            background-color: #333; /* Tmavě šedé pozadí pro prokliky */
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px; /* Posun dolů */
+        }
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+        }
+        .basic {
+            background-color: #0056b3; /* Světlejší modrá pro Basic */
+        }
+        .beefy {
+            background-color: #edda5f; /* Světle žlutá pro Beefy */
+        }
+        .ultimate {
+            background-color: #a027d9; /* Fialová barva pro Ultimate */
+        }
+        .about {
+            background-color: #333; /* Tmavě šedá pro About Us */
+        }
+        .block {
+            width: 90%;
+            margin: 20px auto;
+            padding: 40px; /* Tlustší bloky */
+            font-size: 24px; /* Větší text */
+            color: white;
+            border-radius: 5px;
+            flex: 1; /* Bloky se roztáhnou, aby vyplnily prostor */
+        }
+        .block:nth-child(odd) {
+            background-color: #333; /* Tmavě šedá */
+        }
+        .block:nth-child(even) {
+            background-color: #007BFF; /* Modrá */
+        }
+        .features {
+            background-color: #a027d9; /* Barva obdélníku pro Ultimate plán */
+            padding: 40px;
+            margin: 20px auto;
+            border-radius: 5px;
+            text-align: left; /* Text začínající zleva */
+            width: 90%; /* Šířka pro obdélník */
+            color: black; /* Černé písmo pro vlastnosti */
+        }
+        .checkmark {
+            color: lime; /* Zelená barva pro fajvky */
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            color: white; /* Bílé písmo pro footer */
+            margin-top: auto; /* Posunout footer dolů */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1><a href="hlavni.stranka" style="color: white; text-decoration: none;">Mycat<span>Host</span></a></h1>
+    </div>
+
+    <div class="nav">
+        <a href="hlavni.stranka" class="basic">Basic</a>
+        <a href="hlavni.stranka" class="beefy">Beefy</a>
+        <a href="hlavni.stranka" class="ultimate">Ultimate</a>
+        <a href="hlavni.stranka" class="about">About Us</a>
+    </div>
+
+    <div class="features">
+        <h2>Vlastnosti Ultimate plánu</h2>
+        <p>Neomezený přístup k serverům <span class="checkmark">✔️</span></p>
+        <p>Podpora pro modifikace <span class="checkmark">✔️</span></p>
+        <p>Automatické zálohování <span class="checkmark">✔️</span></p
