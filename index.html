@@ -12,7 +12,7 @@
             background-color: #1a1a1a; /* Tmavé pozadí */
             display: flex;
             flex-direction: column;
-            height: 100vh; /* Výška stránky */
+            min-height: 100vh; /* lepší než pevná výška */
         }
         .header {
             background-color: #007BFF; /* Modrý pruh */
@@ -22,6 +22,7 @@
         .header h1 {
             color: white;
             display: inline;
+            font-size: 28px; /* Větší velikost písma */
         }
         .header h1 span {
             color: red; /* Červená barva pro "Host" */
@@ -30,52 +31,47 @@
             background-color: #333; /* Tmavě šedé pozadí pro prokliky */
             padding: 10px;
             text-align: center;
-            margin-top: 20px; /* Posun dolů */
+            margin-top: 10px; /* Posun dolů */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Mezera mezi odkazy */
         }
         .nav a {
-            margin: 0 15px;
             text-decoration: none;
-            font-size: 24px;
-            padding: 10px 20px;
+            font-size: 20px; /* Velikost písma */
+            padding: 8px 16px; /* Větší padding */
             border-radius: 5px;
             color: white;
+            display: inline-block;
         }
-        .basic {
-            background-color: #0056b3; /* Světlejší modrá pro Basic */
-        }
-        .beefy {
-            background-color: #C9A710; /* Světle žlutá pro Beefy */
-        }
-        .ultimate {
-            background-color: #a027d9; /* Fialová barva pro Ultimate */
-        }
-        .about {
-            background-color: black; /* Bílá pro About Us */
-            color: black; /* Černé písmo pro About Us */
-        }
+        .basic { background-color: #0056b3; } /* Světlejší modrá pro Basic */
+        .beefy { background-color: #C9A710; } /* Světle žlutá pro Beefy */
+        .ultimate { background-color: #a027d9; } /* Fialová barva pro Ultimate */
+        .about { background-color: black; color: white; } /* Bílá pro About Us */
         .block {
             width: 90%;
-            margin: 20px auto;
-            padding: 40px; /* Tlustší bloky */
-            font-size: 24px; /* Větší text */
+            margin: 15px auto; /* Menší mezera */
+            padding: 20px; /* Menší padding */
+            font-size: 18px; /* Větší text */
             color: white;
             border-radius: 5px;
-            flex: 1; /* Bloky se roztáhnou, aby vyplnily prostor */
         }
-        .block:nth-child(odd) {
-            background-color: #333; /* Tmavě šedá */
-        }
-        .block:nth-child(even) {
-            background-color: #007BFF; /* Modrá */
-        }
+        .block:nth-child(odd) { background-color: #333; } /* Tmavě šedá */
+        .block:nth-child(even) { background-color: #007BFF; } /* Modrá */
         .features {
-            background-color: #a027d9; /* Barva obdélníku pro Ultimate plán */
-            padding: 40px;
-            margin: 20px auto;
+            background-color: #0056b3; /* Barva obdélníku pro Ultimate plán */
+            padding: 20px;
+            margin: 15px auto; /* Menší mezera */
             border-radius: 5px;
             text-align: left; /* Text začínající zleva */
             width: 90%; /* Šířka pro obdélník */
             color: black; /* Černé písmo pro vlastnosti */
+            font-size: 18px; /* Větší text */
+        }
+        .features h2 {
+            color: white; /* Bílé písmo pro nadpis */
+            margin-top: 0; /* Odstranění horního okraje */
         }
         .checkmark {
             color: lime; /* Zelená barva pro fajvky */
@@ -85,29 +81,22 @@
             padding: 10px;
             color: white; /* Bílé písmo pro footer */
             margin-top: auto; /* Posunout footer dolů */
+            font-size: 14px; /* Menší velikost písma */
         }
-    </style>
-</head>
-<body>
 
-    <div class="header">
-        <h1><a href="https://mycathost.cz" style="color: white; text-decoration: none;">Mycat<span>Host</span></a></h1>
-    </div>
-
-    <div class="nav">
-        <a href="https://luky1212.github.io/MycatHost.cz-Basic/" class="basic">Basic</a>
-        <a href="https://luky1212.github.io/MycatHost.cz-Beefy/" class="beefy">Beefy</a>
-        <a href="https://luky1212.github.io/MycatHost.cz-Ultimate/" class="ultimate">Ultimate</a>
-        <a href="https://luky1212.github.io/MycatHost.cz-AboutUs/" class="about">About Us</a>
-    </div>>
-
-    <div class="features">
-        <h2>Vlastnosti Ultimate plánu</h2>
-        <p>Neomezený přístup k serverům <span class="checkmark">✔️</span></p>
-        <p>Podpora pro modifikace <span class="checkmark">✔️</span></p>
-        <p>Automatické zálohování <span class="checkmark">✔️</span></p
-
-
-
-
-
+        /* RESPONSIVNÍ úpravy pro mobily */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 22px; /* Menší velikost písma pro mobil */
+            }
+            .nav {
+                flex-direction: column; /* Odkazy pod sebou */
+                gap: 8px; /* Mezera mezi odkazy */
+            }
+            .nav a {
+                font-size: 16px; /* Menší velikost písma pro mobil */
+                padding: 10px; /* Větší padding */
+                width: 90%; /* Odkazy na mobilu široké */
+            }
+            .block, .features {
+                font-size: 16px; /* Menší text pro
