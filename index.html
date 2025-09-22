@@ -12,10 +12,10 @@
             background-color: #1a1a1a;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* lepší než pevná výška */
+            min-height: 100vh;
         }
         .header {
-            background-color: #007BFF;
+            background-color: #c768d5; /* upravená barva banneru */
             padding: 20px;
             text-align: left;
         }
@@ -47,7 +47,7 @@
         }
         .basic { background-color: #2C89E8; }
         .beefy { background-color: #C9A710; }
-        .ultimate { background-color: purple; }
+        .ultimate { background-color: #B877E0; } /* světlejší fialová */
         .about { background-color: black; color: white; }
         .block {
             width: 90%;
@@ -86,7 +86,6 @@
             font-size: 14px;
         }
 
-        /* RESPONSIVNÍ úpravy pro mobily */
         @media (max-width: 600px) {
             .header h1 {
                 font-size: 22px;
@@ -98,7 +97,7 @@
             .nav a {
                 font-size: 16px;
                 padding: 10px;
-                width: 90%; /* odkazy na mobilu široké */
+                width: 90%;
             }
             .block, .features {
                 font-size: 16px;
